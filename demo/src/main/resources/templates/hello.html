@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="/css/spCss.css">
+<script type="text/javascript" src="/js/spjs.js"></script>
+<title>Insert title here</title>
+</head>
+<body>
+	<!-- 変数でサーバー側の値を出力する -->
+	<h1 th:text="${controller} + ' からのメッセージ！'"></h1>
+	
+	<!-- インライン処理 -->
+	<p class="title">[['インライン処理 & css適用']]</p>
+	<p class="title">[['インラインで ' + ${controller} + ' からのメッセージ！']]</p>
+
+	<!-- 各リテラル -->
+	<span th:text="'文字'"></span>
+	<span th:text="'123'"></span>
+	<span th:text="'true'"></span>
+	<span th:text="'null'"></span>
+	<br />
+	<!-- 文字結合 -->
+	<span th:text="'文字 ' + ' 結合!!'"></span>
+</body>
+</html>
